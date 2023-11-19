@@ -201,25 +201,22 @@ header h1.name {
     padding-left: 15px;
 }
 
-/* create a flex display for my projects */
+/* create a grid display for my projects */
 .my-projects {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        "project1 project2 project3";
 }
 
-.card {
-    /* height: 35vh; */
-    /* width: 30vw; */
+.my-projects .card {
+    height: 20vh;
+    width: 20vw;
     border: 2px solid white;
     border-radius: 5%;
     margin: 0 2rem;
     padding: 2rem;
-}
-
-.my-projects div:nth-of-type(1) {
-    flex-grow: 3;
 }
 
 /* Style 'Contact Me' */
