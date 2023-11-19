@@ -1,23 +1,266 @@
+/* Collapse padding and border for all elements */
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+/* Set the page colors from www.coloors.co */
+:root {
+    --main-bk-color: #0D0221;
+    --secondary-bk-color: #6688B0;
+    --main-font-color: white;
+    /* --visited-link: #fdc7ef; */
+    --visited-link: lightgrey;
+    --hover-link: #E65622;
+    /* --hover-link: magenta; */
+    --active-link: #279DC0;
+    /* --highlight-bk-color: #da7df3; */
+    --highlight-bk-color: #C2E7D9;
+    --highlight-font-color: #3B1617;
 }
 
+/* set content highlight color and background */
+::selection {
+    background-color: var(--highlight-bk-color);
+    color: var(--highlight-font-color);
+  }
+
+html {
+    /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
+    font-size: 62.5%;
+  }
+
+/* Set the body colors and font */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.5;
+    background-color: var(--secondary-bk-color);
+    background: linear-gradient(to bottom, var(--main-bk-color), var(--secondary-bk-color));
+    color: var(--main-font-color);
+    height: 100vh;
+    font-size: 1.75rem;
+    line-height: 1.5;
+    font-family: ;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
+/* Set the header colors and display style */
+header {
+    margin: 0 auto;
+    padding: 2.5rem;
+    background-color: var(--main-bk-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-p {
-  margin: 0;
+/* Div for the profile photo and my name to align them to the left */
+.photo-name {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.my-photo {
+    width: 12rem;
+    height: auto;
+    border-radius: 47.5%;
+    margin-left: 2vw;
+    margin-right: 0;
+    overflow: hidden;
+}
+
+.my-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* set the styling for my name */
+header h1.name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 5rem;
+    padding: 1rem 3.5rem;
+    font-weight: bold;
+}
+
+/* pushe the nav to the right */
+.nav {
+    margin-left auto;
+}
+
+/* style the navigation links */
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+}
+
+/* style the page navigation links */
+.nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--main-font-color);
+}
+
+.nav a:hover, a:focus {
+    color: var(--hover-link);
+    cursor: pointer;
+}
+
+.nav a:active {
+    color: var(--active-link);
+}
+
+.nav.resume a:visited {
+    color: var(--visited-link);
+}
+
+/* Separator image */
+.hero-banner {
+    height: 20vh;
+    background-image: url("../images/dark-sphere-small.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-repeat: no-repeat;
+}
+
+/* positioning the motto and setting up for animation */
+.hero-banner div {
+    margin-left: 10vw;
+    margin-right: 20vw;
+    overflow: hidden;
+}
+
+/* Styling the motto in the hero banner */
+.motto {
+    font-family: 'Source Code Pro', sans-serif;
+    font-size: 2rem;
+    color: var(--main-font-color)
+    /* adding animation from https://blog.hubspot.com/website/scrolling-text-css */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  
+  -moz-animation: my-animation 20s linear infinite;
+  -webkit-animation: my-animation 20s linear infinite;
+  animation: my-animation 15s linear infinite;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from { -moz-transform: translateX(100%); }
+  to { -moz-transform: translateX(-100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+/* Make the main section 80% width of viewport */
+.page-wrapper {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-section {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.page-section h2 {
+    flex: 0 0 15vw;
+    font-size: 2.3rem;
+    border-right: 2px double var(--main-font-color);
+    text-align: end;
+    padding-right: 2.5rem;
+}
+
+.page-section p {
+    padding-left: 15px;
+}
+
+/* create a flex display for my projects */
+.my-projects {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card {
+    /* height: 35vh; */
+    /* width: 30vw; */
+    border: 2px solid white;
+    border-radius: 5%;
+    margin: 0 2rem;
+    padding: 2rem;
+}
+
+.my-projects div:nth-of-type(1) {
+    flex-grow: 3;
+}
+
+/* Style 'Contact Me' */
+/* .contact-me { 
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+/* } */
+
+/* .contact ul { */
+    /* display: flex; */
+    /* justify-content: space-evenly; */
+/* } */
+
+/* Style the links in the footer */
+.contact ul {
+    list-style: none;
+    margin: 0;
+
+   
+}
+
+.contact li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: var(--main-font-color);
+}
+
+.contact a:visited {
+    color: var(--visited-link);
+}
+
+.contact a:hover, a:focus {
+    color: var(--hover-link);
+    cursor: pointer;
+}
+
+.contact a:active {
+    color: var(--active-link);
 }
