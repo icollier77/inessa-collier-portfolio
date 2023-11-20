@@ -42,13 +42,13 @@ body {
 
 /* Set the header colors and display style */
 #navBar {
-    /* margin: 0 auto; */
-    /* padding: 2.5rem; */
+    margin: 0 auto;
+    padding: 2.5rem;
     background-color: var(--main-bk-color);
     display: flex;
     flex-direction: row;
-    /* justify-content: space-between; */
-    /* align-items: center; */
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Div for the profile photo and my name to align them to the left */
@@ -80,11 +80,10 @@ body {
     font-size: 5rem;
     padding: 1rem 3.5rem;
     font-weight: bold;
-    /* width: 25%; */
 }
 
 /* push the nav to the right */
-#navigation, #icons {
+#navigation, #iconsNav {
     margin-left auto;
     display: flex;
     width: 50%;
@@ -93,7 +92,7 @@ body {
 }
 
 /* style the navigation links */
-#navigation ul, #icons ul {
+#navigation ul, #iconsNav ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -101,17 +100,17 @@ body {
 }
 
 /* style the page navigation links */
-#navigation li, #icons li {
+#navigation li, #iconsNav li {
     display: inline;
     margin-right: 20px;
 }
 
-#navigation a, #icons a {
+#navigation a, #iconsNav a {
     text-decoration: none;
     color: var(--main-font-color);
 }
 
-#navigation a:hover, a:focus, #icons a:hover, a:focus {
+#navigation a:hover, a:focus, #iconsNav a:hover, a:focus {
     color: var(--hover-link);
     cursor: pointer;
 }
@@ -124,8 +123,8 @@ body {
     color: var(--visited-link);
 }
 
-#icons {
-    display: none;
+#iconsNav {
+    /* display: none; */
 }
 
 /* Separator image */
@@ -190,7 +189,7 @@ body {
 
 /* Make the main section 80% width of viewport */
 .page-wrapper {
-    /* width: 85%; */
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -205,7 +204,7 @@ body {
 .page-section h2 {
     flex: 0 0 15vw;
     font-size: 2.3rem;
-    border-right: 2px double var(--main-font-color);
+    border-right: 2px solid var(--main-font-color);
     text-align: end;
     padding-right: 2.5rem;
 }
@@ -217,18 +216,20 @@ body {
 /* create a grid display for my projects */
 .my-projects {
     display: grid;
-    grid-template-rows: 1fr;
+    justify-items: center;
+    grid-template-rows: 1fr 1fr;
     grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
     grid-template-areas: 
-        "project1 project2 project3";
+        "project1 project2 project3"
+        "project4 project5 project6";
 }
 
 .my-projects .card {
-    height: 20vh;
-    width: 20vw;
+    /* height: 20vh; */
+    /* width: 20vw; */
     border: 2px solid white;
-    border-radius: 5%;
-    margin: 0 2rem;
+    border-radius: 10%;
     padding: 2rem;
 }
 
@@ -291,13 +292,13 @@ body {
       display: none;
     }
     
-    #icons {
+    #iconsNav {
         display: flex;
         flex-flow: row wrap;
         margin-left: auto;
     }
 
-    #icons img {
+    #iconsNav img {
         height: 15%;
         width: 15%;
     }
