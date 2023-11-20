@@ -41,22 +41,25 @@ body {
 }
 
 /* Set the header colors and display style */
-header {
-    margin: 0 auto;
-    padding: 2.5rem;
+#navBar {
+    /* margin: 0 auto; */
+    /* padding: 2.5rem; */
     background-color: var(--main-bk-color);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    /* align-items: center; */
 }
 
 /* Div for the profile photo and my name to align them to the left */
-.photo-name {
+#photo-name {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
-.my-photo {
+
+/* styling for the profile photo */
+#profile-photo {
     width: 12rem;
     height: auto;
     border-radius: 47.5%;
@@ -65,27 +68,32 @@ header {
     overflow: hidden;
 }
 
-.my-photo img {
+#profile-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 /* set the styling for my name */
-header h1.name {
+#navBar h1.name {
     font-family: 'Poppins', sans-serif;
     font-size: 5rem;
     padding: 1rem 3.5rem;
     font-weight: bold;
+    /* width: 25%; */
 }
 
-/* pushe the nav to the right */
-.nav {
+/* push the nav to the right */
+#navigation, #icons {
     margin-left auto;
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 /* style the navigation links */
-.nav ul {
+#navigation ul, #icons ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -93,32 +101,37 @@ header h1.name {
 }
 
 /* style the page navigation links */
-.nav li {
+#navigation li, #icons li {
     display: inline;
     margin-right: 20px;
 }
 
-.nav a {
+#navigation a, #icons a {
     text-decoration: none;
     color: var(--main-font-color);
 }
 
-.nav a:hover, a:focus {
+#navigation a:hover, a:focus, #icons a:hover, a:focus {
     color: var(--hover-link);
     cursor: pointer;
 }
 
-.nav a:active {
+#navigation a:active {
     color: var(--active-link);
 }
 
-.nav.resume a:visited {
+#navigation.resume a:visited {
     color: var(--visited-link);
+}
+
+#icons {
+    display: none;
 }
 
 /* Separator image */
 .hero-banner {
     height: 20vh;
+    width: 100vw;
     background-image: url("../images/dark-sphere-small.jpg");
     background-size: cover;
     background-position: center;
@@ -177,7 +190,7 @@ header h1.name {
 
 /* Make the main section 80% width of viewport */
 .page-wrapper {
-    width: 85%;
+    /* width: 85%; */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -261,3 +274,31 @@ header h1.name {
 .contact a:active {
     color: var(--active-link);
 }
+
+
+/* Media queries */
+
+@media only screen and (max-width: 600px) {
+    #navBar h1.name {
+        font-family: 'Poppins', sans-serif;
+        font-size: 2rem;
+        /* padding: 1rem 3.5rem; */
+        font-weight: bold;
+        /* width: 25%; */
+    }
+    
+    #navigation {
+      display: none;
+    }
+    
+    #icons {
+        display: flex;
+        flex-flow: row wrap;
+        margin-left: auto;
+    }
+
+    #icons img {
+        height: 15%;
+        width: 15%;
+    }
+  }
