@@ -59,10 +59,15 @@ h2 {
   text-shadow: 1px 1px 2px black, 0 0 25px var(--active-link), 0 0 5px var(--main-bk-color);
 }
 
+.page-section h2:hover {
+    text-shadow: 1px 1px 2px black, 0 0 25px var(--hover-link), 0 0 5px var(--highlight-font-color);
+  }
+
 h3 {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.2em;
 }
+
 h4 {
     font-family: 'Source Code Pro', sans-serif;
 }
@@ -121,18 +126,18 @@ h4 {
 
 /* style the navigation and contact links */
 .navigation ul, 
-.contact ul {
+.contact-links ul {
     list-style: none;
     margin: 0;
     padding: 0;
     font-size: 2rem;
+    display: flex;
 }
 
 /* style the page navigation links */
 .navigation li,
 .contact-links li {
-    /* display: inline; */
-    /* margin-right: 2em; */
+    margin-right: 2em;
 }
 
 
@@ -186,14 +191,14 @@ h4 {
 .motto {
     font-size: 2rem;
     color: var(--main-font-color)
-    /* adding animation from https://blog.hubspot.com/website/scrolling-text-css */
+    /* animation from https://blog.hubspot.com/website/scrolling-text-css */
     -moz-transform: translateX(100%);
     -webkit-transform: translateX(100%);
-  transform: translateX(100%);
+    transform: translateX(100%);
   
-  -moz-animation: my-animation 20s linear infinite;
-  -webkit-animation: my-animation 20s linear infinite;
-  animation: my-animation 15s linear infinite;
+    -moz-animation: my-animation 20s linear infinite;
+    -webkit-animation: my-animation 20s linear infinite;
+    animation: my-animation 15s linear infinite;
 }
 
 /* for Firefox */
@@ -242,9 +247,10 @@ h4 {
 .page-section h2 {
     flex: 0 0 15vw;
     font-size: 2.3rem;
-    /* border-right: 2px solid var(--main-font-color); */
+    border-right: 2px solid var(--main-font-color);
     text-align: end;
     padding-right: 2.5rem;
+    /* margin-right: auto; */
 }
 
 .page-section p {
@@ -265,8 +271,8 @@ h4 {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
-        "project1 project2 project3"
-        "project4 project5 project6";
+        "project1 project1 project2"
+        "project3 project4 project5";
 }
 
 .card {
@@ -354,12 +360,13 @@ h4 {
 
 /* TODO: align the 'Contact Me' links */
 
-/* Style the 1st level 'Contact Me' container */
-.contact-me { 
+/* Set the height of 'Contact Me' section */
+.contact-me {
+    height: 7em;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    height: 10em;
 }
 
 /* display the 'Contact Me' links in the center */
