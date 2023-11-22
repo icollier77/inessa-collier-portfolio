@@ -24,74 +24,106 @@
       </div>
       <h1 class="name">Inessa Collier</h1>
     </div>
-    <nav id="navigation">
+    <nav class="navigation" id="navigationText">
       <ul>
-        <li><a href="#about">About me</a></li>
-        <li><a href="#work">My work</a></li>
-        <li><a href="#contact">Contact me</a></li>
-        <li class="resume"><a href="" target="_blank">Resume/CV</a></li>
+        <li><a href="#about"><h2>About me</h2></a></li>
+        <li><a href="#work"><h2>My work</h2></a></li>
+        <li><a href="#contact"><h2>Contact me</h2></a></li>
+        <li id="resume"><a href="https://drive.google.com/file/d/1BZ-cralgW9mdDXqC3g7dtqaPlMkH2jqf/view?usp=sharing" target="_blank"><h2>Resume/CV</h2></a></li>
       </ul>
     </nav>
-    <div id="iconsNav">
+    <nav class="navigation" id="navigationIcons">
       <ul>
         <li><a href="#about"><img src="starter/images/user-4-64.png" alt="about me"></a></li>
         <li><a href="#work"><img src="starter/images/project-64.png" alt="my work"></a></li>
         <li><a href="#contact"><img src="starter/images/inbox-8-64.png" alt="contact me"></a></li>
         <li><a href="" target="_blank"><img src="starter/images/document-2-64.png" alt="resume"></a></li>
       </ul>
-      
-    </div>
+    </nav>
   </header>
 
   <!-- hero banner -->
   <section class="hero-banner">
     <div>
-      <h2 class="motto">Let's build something!</h2>
+      <h4 class="motto">Let's build something great!</h4>
     </div>
   </section>
   
+  <!-- Main section, 80% of the screen width -->
   <main class="page-wrapper">
     <!-- about me -->
-    <section class="page-section about">
+    <section class="page-section" id="about">
       <h2 id="about-me">About Me</h2>
-      <section>
+      <section id="aboutText">
         <p>After 10+ years in the financial industry and a stint in sustainable fashion entrepreneurship, I am diving into the world of tech and learning programming. Currently I am taking a Front-End Web Development Bootcamp.</p>
+        <br>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem voluptas quo voluptatibus provident veritatis itaque, ipsum quam iure ullam eius, totam omnis, laborum iusto dolorem sit aliquam et vel expedita!
+        Aut perspiciatis excepturi rem tempora sapiente minima. Cupiditate illo est adipisci assumenda libero provident, aspernatur ab corporis molestiae quae illum repellendus, tenetur culpa esse facilis aliquid necessitatibus itaque quis dolorem.</p>
         <!-- <p>add second paragraph</p> -->
       </section>
     </section>
 
     <!-- portfolio container -->
-    <section class="page-section work">
+    <section class="page-section" id="work">
       <h2 id="my-work">My Work</h2>
       <section class="my-projects">
-        <div class="card" id="project1">Project 1</div>
-        <div class="card" id="project2">Project 2</div>
-        <div class="card" id="project3">Project 3</div>
-        <div class="card" id="project4">Project 4</div>
-        <div class="card" id="project5">Project 5</div>
-        <div class="card" id="project6">Project 6</div>
+        <div class="card" id="project1">
+          <div class="text">
+            <h3>Hori<i></i>seo</i>n</h3>
+            <p>Code refactoring assignment</p>
+          </div>
+        </div>
+        <div class="card" id="project2">
+          <div class="text">
+            <h3>Prework Study Guide</h3>
+            <p>A study guide for the Front End Web Development Bootcamp</p>
+          </div>
+        </div>
+        <div class="card" id="project3">
+          <div class="text">
+            <h3>CSS Snippet Cheatsheet</h3>
+            <p>A cheatsheet with CSS code</p>
+          </div>
+        </div>
+        <div class="card" id="project4">
+          <div class="text">
+            <h3>My bio landing page</h3>
+            <p>A practice langing page with dummy bio</p>
+          </div>
+        </div>
+        <div class="card" id="project5">
+          <div class="text">
+            <h3>Project 5</h3>
+            <p>Coming soon</p>
+          </div>
+        </div>
+        <div class="card" id="project6">
+          <div class="text">
+            <h3>Project 6</h3>
+            <p>Coming soon</p>
+          </div>
+        </div>
       </section>
     </section>
 
-    <!-- contact -->
+    <!-- contact section -->
     <section class="page-section contact-me">
       <h2>Contact Me</h2>
-      <nav class="contact" id="contact">
-        <ul>
-          <li id="email"><a href="mailto:inessa.collier@gmail.com" target="_blank">Email</a></li>
-          <li id="linkedin"><a href="https://www.linkedin.com/in/inessacollier/" target="_blank">LinkedIn</a></li>
-          <li id="GitHub"><a href=" https://github.com/icollier77" target="_blank">GitHub</a></li>
-        </ul>
-      </nav>
-      <nav class="contact" id="iconsContact">
-        <ul>
-          <li><a href="mailto:inessa.collier@gmail.com" target="_blank"><img src="starter/images/email-14-64.png" alt="email me"></a></li>
-          <li><a href="https://www.linkedin.com/in/inessacollier/" target="_blank"><img src="starter/images/linkedin-4-64.png" alt="LinkedIn"></a></li>
-          <li><a href="https://github.com/icollier77 " target="_blank"><img src="starter/images/github-10-64.png" alt="github"></a></li>
-        </ul>
-      </nav>
+      <ul class="contact-links" id="contactText">
+          <li><a href="mailto:inessa.collier@gmail.com" target="_blank">Email</a></li>
+          <li><a href="https://www.linkedin.com/in/inessacollier/" target="_blank">LinkedIn</a></li>
+          <li><a href=" https://github.com/icollier77" target="_blank">GitHub</a></li>
+      </ul>
+      <ul class="contact-links" id="contactIcons">
+        <li><a href="mailto:inessa.collier@gmail.com" target="_blank"><img src="starter/images/email-14-64.png" alt="email me"></a></li>
+        <li><a href="https://www.linkedin.com/in/inessacollier/" target="_blank"><img src="starter/images/linkedin-4-64.png" alt="LinkedIn"></a></li>
+        <li><a href="https://github.com/icollier77 " target="_blank"><img src="starter/images/github-10-64.png" alt="github"></a></li>
+      </ul>
     </section>
-  </main> 
+  </main>
+  <footer>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat totam eligendi nisi magni praesentium animi, dolor, reiciendis voluptate alias earum harum unde tempora et sint molestiae quibusdam vel pariatur dolores.</p>
+  </footer> 
 </body>
 
 </html>

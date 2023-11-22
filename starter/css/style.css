@@ -1,8 +1,19 @@
-/* Collapse padding and border for all elements */
+html {
+    /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  /* Collapse padding and border for all elements */
 * {
     box-sizing: border-box;
   }
 
+/* Website colour palette */
 /* Set the page colors from www.coloors.co */
 :root {
     --main-bk-color: #0D0221;
@@ -24,26 +35,43 @@
     color: var(--highlight-font-color);
   }
 
-html {
-    /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
-    font-size: 62.5%;
-  }
-
 /* Set the body colors and font */
 body {
-    background-color: var(--secondary-bk-color);
-    background: linear-gradient(to bottom, var(--main-bk-color), var(--secondary-bk-color));
+    margin: 0;
+    padding: 0;
     color: var(--main-font-color);
-    height: 100vh;
     font-size: 1.75rem;
     line-height: 1.5;
-    font-family: ;
+    height: 100%;
+}
+
+.page-wrapper {
+    background: linear-gradient(to bottom, var(--main-bk-color), var(--secondary-bk-color));
+}
+
+/* Typography */
+h1,
+h2 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.page-section h2 {
+  text-shadow: 1px 1px 2px black, 0 0 25px var(--active-link), 0 0 5px var(--main-bk-color);
+}
+
+h3 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+}
+h4 {
+    font-family: 'Source Code Pro', sans-serif;
 }
 
 /* Set the header colors and display style */
 #navBar {
+    height: 10em;
     margin: 0 auto;
-    padding: 2.5rem;
+    padding: 2.5em;
     background-color: var(--main-bk-color);
     display: flex;
     flex-direction: row;
@@ -68,6 +96,7 @@ body {
     overflow: hidden;
 }
 
+/* Profile photo sizing */
 #profile-photo img {
     width: 100%;
     height: 100%;
@@ -75,24 +104,24 @@ body {
 }
 
 /* set the styling for my name */
-#navBar h1.name {
-    font-family: 'Poppins', sans-serif;
+#photo-name h1.name {
     font-size: 5rem;
     padding: 1rem 3.5rem;
     font-weight: bold;
 }
 
-/* push the nav to the right */
-#navigation, #iconsNav {
+/* push Navigation links to the right */
+.navigation {
     margin-left auto;
-    display: flex;
     width: 50%;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-evenly;
 }
 
-/* style the navigation links */
-#navigation ul, #iconsNav ul {
+/* style the navigation and contact links */
+.navigation ul, 
+.contact ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -100,31 +129,37 @@ body {
 }
 
 /* style the page navigation links */
-#navigation li, #iconsNav li {
-    display: inline;
-    margin-right: 20px;
+.navigation li,
+.contact-links li {
+    /* display: inline; */
+    /* margin-right: 2em; */
 }
 
-#navigation a, #iconsNav a {
+
+#navigationText a, 
+#navigationIcons a {
     text-decoration: none;
     color: var(--main-font-color);
 }
 
-#navigation a:hover, a:focus, #iconsNav a:hover, a:focus {
+#navigationText a:hover, a:focus, 
+#navigationIcons a:hover, a:focus {
     color: var(--hover-link);
     cursor: pointer;
 }
 
-#navigation a:active {
+#navigationText a:active {
     color: var(--active-link);
 }
 
-#navigation.resume a:visited {
-    color: var(--visited-link);
+#navigationText #resume a:visited {
+    /* color: var(--visited-link); */
 }
 
-#iconsNav {
-    /* display: none; */
+/* Hide navigation and contact icons in full size screen */
+#navigationIcons, 
+#contactIcons {
+    display: none;
 }
 
 /* Separator image */
@@ -149,7 +184,6 @@ body {
 
 /* Styling the motto in the hero banner */
 .motto {
-    font-family: 'Source Code Pro', sans-serif;
     font-size: 2rem;
     color: var(--main-font-color)
     /* adding animation from https://blog.hubspot.com/website/scrolling-text-css */
@@ -187,12 +221,15 @@ body {
   }
 }
 
+/* Main section that contains About me, My work, Contact me */
+
 /* Make the main section 80% width of viewport */
 .page-wrapper {
-    width: 100%;
+    /* width: 80%; */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    
 }
 
 .page-section {
@@ -201,10 +238,11 @@ body {
     padding: 1.5rem;
 }
 
+/* Titles of the main sections */
 .page-section h2 {
     flex: 0 0 15vw;
     font-size: 2.3rem;
-    border-right: 2px solid var(--main-font-color);
+    /* border-right: 2px solid var(--main-font-color); */
     text-align: end;
     padding-right: 2.5rem;
 }
@@ -213,93 +251,214 @@ body {
     padding-left: 15px;
 }
 
+/* About Me section */
+#about {
+    height: auto;
+    margin: 3em 5em 2em 2em;
+}
+
+
 /* create a grid display for my projects */
 .my-projects {
+    margin: 0 auto;
     display: grid;
-    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
     grid-template-areas: 
         "project1 project2 project3"
         "project4 project5 project6";
 }
 
-.my-projects .card {
-    /* height: 20vh; */
-    /* width: 20vw; */
+.card {
+    height: 25em;
+    width: 20em;
     border: 2px solid white;
     border-radius: 10%;
     padding: 2rem;
+    display: flex;
+    /* flex-direction: row wrap; */
+    align-items: flex-end;
+    margin: 1em 1em;
 }
 
-/* Style 'Contact Me' */
-/* .contact-me { 
-    /* display: flex; */
-    /* justify-content: space-between; */
-    /* align-items: center; */
-/* } */
+.text {
+    /* background-color: rgba(var(--main-bk-color), 0.7); */
+    background-color: var(--main-bk-color);
+    /* background-color: rgba(0,0,0,0.7); */
+    opacity: 0.8;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    width: 20em;
+    padding: 20px 40px;
+  }
 
-/* .contact ul { */
-    /* display: flex; */
-    /* justify-content: space-evenly; */
-/* } */
-
-/* Style the links in the footer */
-.contact ul {
-    list-style: none;
-    margin: 0;
-
-   
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
-.contact li {
-    display: inline;
-    margin-right: 20px;
+.card:nth-of-type(1):hover {
+    transform: scale(1.2);
 }
 
-.contact a {
+#project1 {
+    margin-top: 2em;
+    background-image: url(../images/project1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#project2 {
+    margin-top: 2em;
+    background-image: url(../images/project2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#project3 {
+    margin-top: 2em;
+    background-image: url(../images/project3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#project4 {
+    margin-top: 2em;
+    background-image: url(../images/project4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#project5 {
+    margin-top: 2em;
+    background-image: url(../images/project5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#project6 {
+    margin-top: 2em;
+    background-image: url(../images/project6.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* The 'footer' section with the contact links */
+
+
+/* TODO: align the 'Contact Me' links */
+
+/* Style the 1st level 'Contact Me' container */
+.contact-me { 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10em;
+}
+
+/* display the 'Contact Me' links in the center */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  /* Style the text links in the footer */
+.contact-links a {
+    padding: 20px 40px;
     text-decoration: none;
     color: var(--main-font-color);
+  }
+
+.contact-links a:visited {
+    /* color: var(--visited-link); */
 }
 
-.contact a:visited {
-    color: var(--visited-link);
-}
-
-.contact a:hover, a:focus {
+.contact-links a:hover, a:focus {
     color: var(--hover-link);
     cursor: pointer;
 }
 
-.contact a:active {
+.contact-links a:active {
     color: var(--active-link);
 }
 
+/* Footer styling */
+footer {
+    background-color: var(--main-bk-color);
+}
 
-/* Media queries */
+/* not working, change */
+footer p {
+    padding: 50em auto;
+}
+
+/* Media queries to dynamically resize the page */
+
+/* Mobile phone screen */
 
 @media only screen and (max-width: 600px) {
     #navBar h1.name {
-        font-family: 'Poppins', sans-serif;
+        /* font-family: 'Poppins', sans-serif; */
         font-size: 2rem;
         /* padding: 1rem 3.5rem; */
         font-weight: bold;
         /* width: 25%; */
     }
     
-    #navigation {
+    /* hide text navigation and contact links */
+    #navigationText, #contactText {
       display: none;
     }
     
-    #iconsNav {
+    /* Display icons in small screen */
+    #iconsNav, #iconsContact {
         display: flex;
         flex-flow: row wrap;
-        margin-left: auto;
+        justify-content: center;
+        margin: 0 auto;
     }
 
     #iconsNav img {
-        height: 15%;
-        width: 15%;
+        height:fit-content;
+    }
+
+    /* adjust the icon size */
+    #iconsContact img {
+        height: 50%;
+        width: auto;
+    }
+
+    /* Resize the grid */
+    .my-projects {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas: 
+            "project1" 
+            "project2" 
+            "project3"
+            "project4" 
+            "project5" 
+            "project6";
+     }
+
+     .card {
+        height: 10em;
+        width: 10em;
+        border: 2px solid white;
+        border-radius: 10%;
+        padding: 2rem;
+        display: flex;
+        /* flex-direction: row wrap; */
+        align-items: flex-end;
+        margin: 1em 1em;
     }
   }
