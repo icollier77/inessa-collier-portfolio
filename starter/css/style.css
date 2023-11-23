@@ -261,87 +261,75 @@ h5 {
     margin: 3em 5em 2em 2em;
 }
 
-
-/* create a grid display for my projects */
+/* create a flex display for my projects */
 .my-projects {
+    height: 500px;
     margin: 0 auto;
     display: flex;
     flex-flow: row wrap;
-    width: 80%;
+    width: 70%;
+    outline: 3px double magenta;
 }
 
-.card {
-    height: 15em;
-    width: 15em;
-    border-bottom: 2px solid white;
-    display: flex;
-    flex-direction: row wrap;
-    align-items: flex-end;
-    margin: 1em 1em;
-}
-
-.text {
-    
-    background-color: var(--main-bk-color);
-    opacity: 0.8;
-    padding: 2em 2em;
-    width: 100%;
-  }
-
+/* project cards when moused over */
 .card:hover {
     cursor: pointer;
     transform: scale(1.05);
     box-shadow: 1px 1px 2px var(--main-bk-color), 0 0 25px var(--highlight-font-color), 0 0 5px var(--highlight-font-color);
 }
 
-.card:nth-of-type(1) {
-    height: 35em;
-    width: 25em;
-    margin-top: 2em;
+/* size and style for all project cards */
+.card {
+    height: 10em;
+    width: 10em;
+    border-bottom: 2px solid white;
+    display: flex;
+    flex-direction: row wrap;
+    align-items: flex-end;
+    margin: 1em;
+    outline: 2px dotted greenyellow;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* overwrites size for the 1st card */
+#project1 {
+    height: 25em;
+    width: 20em;
     background-image: url(../images/project1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
-.card:nth-of-type(2) {
-    margin-top: 2em;
+/* style for the text in the cards */
+.text {
+    background-color: var(--main-bk-color);
+    opacity: 0.8;
+    padding: 2em 2em;
+    width: 100%;
+    outline: 2px dotted orange;
+  }
+
+/* section with smaller cards */
+.smallerCards {
+    display: flex;
+    flex-flow: column wrap;
+    outline: 3px double orangered;
+}
+
+#project2 {
     background-image: url(../images/project2.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
-.card:nth-of-type(3) {
-    margin-top: 2em;
+#project3 {
     background-image: url(../images/project3.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
-.card:nth-of-type(4) {
-    margin-top: 2em;
+#project4 {
     background-image: url(../images/project4.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
-.card:nth-of-type(5) {
-    margin-top: 2em;
+#project5 {
     background-image: url(../images/project5.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.card:nth-of-type(6) {
-    margin-top: 2em;
-    background-image: url(../images/project6.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 /* The 'footer' section with the contact links */
