@@ -19,14 +19,11 @@ html {
     --main-bk-color: #0D0221;
     --secondary-bk-color: #6688B0;
     --main-font-color: white;
-    /* --visited-link: #fdc7ef; */
     --visited-link: lightgrey;
-    --hover-link: #E65622;
-    /* --hover-link: magenta; */
+    --hover-link: #C419BE;   
     --active-link: #279DC0;
-    /* --highlight-bk-color: #da7df3; */
     --highlight-bk-color: #C2E7D9;
-    --highlight-font-color: #3B1617;
+    --highlight-font-color: #2628DD;
 }
 
 /* set content highlight color and background */
@@ -56,12 +53,8 @@ h2 {
 }
 
 .page-section h2 {
-  text-shadow: 1px 1px 2px black, 0 0 25px var(--active-link), 0 0 5px var(--main-bk-color);
+  /* text-shadow: 1px 1px 2px black, 0 0 25px var(--active-link), 0 0 5px var(--main-bk-color); */
 }
-
-.page-section h2:hover {
-    text-shadow: 1px 1px 2px black, 0 0 25px var(--hover-link), 0 0 5px var(--highlight-font-color);
-  }
 
 h3 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -70,6 +63,10 @@ h3 {
 
 h4 {
     font-family: 'Source Code Pro', sans-serif;
+}
+
+h5 {
+    font-family:'Courier New', Courier, monospace;
 }
 
 /* Set the header colors and display style */
@@ -250,11 +247,10 @@ h4 {
     border-right: 2px solid var(--main-font-color);
     text-align: end;
     padding-right: 2.5rem;
-    /* margin-right: auto; */
 }
 
-.page-section p {
-    padding-left: 15px;
+#aboutText{
+    padding-left: 2em;
 }
 
 /* About Me section */
@@ -267,47 +263,42 @@ h4 {
 /* create a grid display for my projects */
 .my-projects {
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
-        "project1 project1 project2"
-        "project3 project4 project5";
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
 }
 
 .card {
-    height: 25em;
-    width: 20em;
-    border: 2px solid white;
+    height: 15em;
+    width: 15em;
+    border: 1px solid white;
     border-radius: 10%;
     padding: 2rem;
     display: flex;
-    /* flex-direction: row wrap; */
+    flex-direction: row wrap;
     align-items: flex-end;
     margin: 1em 1em;
 }
 
 .text {
-    /* background-color: rgba(var(--main-bk-color), 0.7); */
     background-color: var(--main-bk-color);
-    /* background-color: rgba(0,0,0,0.7); */
     opacity: 0.8;
-    border-bottom-left-radius: 10%;
-    border-bottom-right-radius: 10%;
+    border-radius: 10%;
     width: 20em;
-    padding: 20px 40px;
+    height: 10em;
+    padding: 2em 2em;
+    /* vertical-align: middle; */
   }
 
 .card:hover {
     cursor: pointer;
     transform: scale(1.05);
+    box-shadow: 1px 1px 2px black, 0 0 25px navy, 0 0 5px var(--highlight-font-color);
 }
 
-.card:nth-of-type(1):hover {
-    transform: scale(1.2);
-}
-
-#project1 {
+.card:nth-of-type(1) {
+    height: 35em;
+    width: 25em;
     margin-top: 2em;
     background-image: url(../images/project1.jpg);
     background-size: cover;
@@ -315,7 +306,7 @@ h4 {
     background-position: center;
 }
 
-#project2 {
+.card:nth-of-type(2) {
     margin-top: 2em;
     background-image: url(../images/project2.jpg);
     background-size: cover;
@@ -323,7 +314,7 @@ h4 {
     background-position: center;
 }
 
-#project3 {
+.card:nth-of-type(3) {
     margin-top: 2em;
     background-image: url(../images/project3.jpg);
     background-size: cover;
@@ -331,7 +322,7 @@ h4 {
     background-position: center;
 }
 
-#project4 {
+.card:nth-of-type(4) {
     margin-top: 2em;
     background-image: url(../images/project4.jpg);
     background-size: cover;
@@ -339,7 +330,7 @@ h4 {
     background-position: center;
 }
 
-#project5 {
+.card:nth-of-type(5) {
     margin-top: 2em;
     background-image: url(../images/project5.jpg);
     background-size: cover;
@@ -347,7 +338,7 @@ h4 {
     background-position: center;
 }
 
-#project6 {
+.card:nth-of-type(6) {
     margin-top: 2em;
     background-image: url(../images/project6.jpg);
     background-size: cover;
@@ -357,9 +348,6 @@ h4 {
 
 /* The 'footer' section with the contact links */
 
-
-/* TODO: align the 'Contact Me' links */
-
 /* Set the height of 'Contact Me' section */
 .contact-me {
     height: 7em;
@@ -367,6 +355,12 @@ h4 {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+#contactText {
+    position: relative;
+    right: 300px;
+    font-size: 1.5em;
 }
 
 /* display the 'Contact Me' links in the center */
@@ -399,11 +393,13 @@ h4 {
 /* Footer styling */
 footer {
     background-color: var(--main-bk-color);
+    height: 5em;
 }
 
-/* not working, change */
-footer p {
-    padding: 50em auto;
+/* TODO: not working, change */
+footer h5 {
+    text-align: center;
+    padding-top: 2em;
 }
 
 /* Media queries to dynamically resize the page */
@@ -442,7 +438,7 @@ footer p {
         width: auto;
     }
 
-    /* Resize the grid */
+    /* TODO: CHANGE Resize the grid */
     .my-projects {
         margin: 0 auto;
         display: grid;
