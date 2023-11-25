@@ -367,8 +367,8 @@ h5 {
     color: var(--main-font-color);
   }
 
-.contact-links a:hover, 
-.contact-links a:focus {
+#contactText a:hover, 
+#contactText a:focus {
     background-color: var(--highlight-font-color);
     border-radius: 5px;
     cursor: pointer;
@@ -527,6 +527,11 @@ footer h5 {
         position: relative;
         margin: 0 auto 25px auto;
     }
+
+    #contactIcons a:hover,
+    #contactIcons a:focus {
+        cursor: pointer;
+    }
 }
 
 
@@ -663,6 +668,11 @@ footer h5 {
     #navBar h1.name {
         font-size: 1.5rem;
     }
+
+    .contact-links a {
+        padding: 2px;
+        margin: auto 15px;
+    }
 }
 
 /* Mobile phone screen - 320px */
@@ -702,8 +712,7 @@ footer h5 {
 
     /* Style the text links in the 'Contact me' section */
     .contact-links a {
-        padding: 2px;
-        margin: auto 1px;
+        margin: auto 10px;
     }
 }
 
