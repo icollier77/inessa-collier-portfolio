@@ -697,15 +697,13 @@ footer h5 {
 
     /* change the space between navigation links */
     .navigation li {
-       margin: 0 5px;
+       margin: 0;
     }
 
-    /*  */
+    /* Style the text links in the 'Contact me' section */
     .contact-links a {
         padding: 2px;
-        margin: auto 2em;
-      }
-
-   
+        margin: auto 5px;
+    }
 }
 
