@@ -6,7 +6,6 @@ html {
 
   html, body {
     height: 100%;
-    width: 100vw;
   }
 
   /* Collapse padding and border for all elements */
@@ -35,8 +34,6 @@ html {
 
 /* Set the body colors and font */
 body {
-    margin: 0;
-    padding: 0;
     color: var(--main-font-color);
     font-family: 'Work Sans', sans-serif;
     font-size: 1.75rem;
@@ -154,8 +151,6 @@ h5 {
     color: var(--hover-link);
 }
 
-
-
 #navigationText a:active {
     color: var(--active-link);
 }
@@ -231,9 +226,8 @@ h5 {
 
 /* Main section that contains About me, My work, Contact me */
 
-/* Make the main section 80% width of viewport */
+/* Set up the main section layout and design */
 .page-wrapper {
-    /* width: 80%; */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -337,7 +331,7 @@ h5 {
     /* outline: 2px dotted orange; */
 }
 
-/* The 'footer' section with the contact links */
+/* The 'Contact' section with the contact links */
 /* Set the height of 'Contact Me' section */
 .contact-me {
     height: 7em;
@@ -362,7 +356,7 @@ h5 {
     align-items: center;
 }
 
-  /* Style the text links in the footer */
+  /* Style the text links in the 'Contact me' section */
 .contact-links a {
     /* font-family: 'Poppins', sa  ns-serif; */
     font-family: 'Josefin Sans', sans-serif;
@@ -420,7 +414,7 @@ footer h5 {
         margin-right: 1em;
     }
 
-    /* resize the section title size */
+    /* resize the section's title size */
     .page-section h2 {
         font-size: 1.5em;
         padding-right: 0.5em;
@@ -517,7 +511,7 @@ footer h5 {
     #contactIcons {
         display: flex;
         flex-direction: row;
-        /* justify-content: flex-start; */
+        justify-content: space-between;
         align-items: center;
         position: relative;
         right: 10vw;
@@ -528,18 +522,141 @@ footer h5 {
 /* Mobile phone screen - 425px */
 
 @media only screen and (max-width: 425px) {
-    body {
-        width: 425px;
+    /* resize navBar */
+    #navBar {
+        height: 5em;
+        padding: 0.5em;
     }
     
     /* resize the profile photo */
     #profile-photo {
-        width: 5rem;
+        width: 3.5rem;
         margin-left: 1vw;
     }
     
+    /* resize my name */
     #navBar h1.name {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
+    /* resize the navigation text */
+    #navigationText {
+        margin-right: 2px;
+    }
+    
+    .navigation h2 {
+        font-size: 10px;
+    }
+
+    .navIcon {
+        /* max-width: 10px; */
+        /* max-width: 10px; */
+        /* margin-right: 5em; */
+    }
+
+    /* resize the hero banner */
+    .hero-banner {
+        height: 10vh;
+    }
+
+    .hero-banner h4 {
+        font-size: 16px;
+    }
+
+    /* change the main section layout */
+    .page-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+    }
+
+    /* resize section titles */
+    .page-section h2 {
+        flex: 0;
+        font-size: 1em;
+        margin: 0 auto 10px auto;
+        border-right: none;
+    }
+
+    /* reduce the 'About' section top and bottom margins */
+    #about {
+        margin: 15px auto;
+    }
+
+    /* resize the 'About' text */
+    #aboutText {
+        padding-left: 4em;
+        padding-right: 4em;
+        font-size: 12px;
+    }
+
+    /* resize the 'Portfolio' section */
+    .my-projects {
+        min-height: 100px;
+        height: 50vh;
+        width: 80%;
+        margin: 0px 2px;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+            "project1 project1"
+            "project2 project3"
+            "project4 project5";
+        /* outline: 3px double magenta; */
+    }
+
+    /* resize the project cards */
+    .card {
+        border-bottom: 1px solid white;
+        margin: 5px;
+    }
+
+    /* change the text sizing on cards */
+    .text {
+        padding: 0 5px;
+    }
+
+    .text h3 {
+        font-size: 14px;
+    }
+
+    .text p {
+        font-size: 14px;
+    }
+
+    /* resize the 'Contact' section title */
+    #contact h2 {
+        margin: 20px auto;
+    }
+  
+    /* replace contact text with icons */
+    #contactText {
+        display: none;
+    }
+
+    #contactIcons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        right: 3px;
+        margin-bottom: 15px;
+    }
+
+    .contact-links li {
+        margin-right: 0;
+    }
+
+    /* resize the footer */
+    footer {
+        height: 4em;
+    }
+
+    footer h5 {
+        font-size: 12px;
+        padding-top: 1em;
+    }
   }
