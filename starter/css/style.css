@@ -135,7 +135,6 @@ h5 {
     margin-right: 2em;
 }
 
-
 #navigationText a, 
 #navigationIcons a {
     text-decoration: none;
@@ -320,20 +319,16 @@ h5 {
     box-shadow: 1px 1px 2px var(--main-bk-color), 0 0 25px var(--highlight-font-color), 0 0 5px var(--main-font-color);
 }
 
-
 /* style for the text in the cards */
 .text {
     background-color: var(--main-bk-color);
     opacity: 0.8;
     padding: 2em 2em;
     width: 100%;
-    outline: 2px dotted orange;
-  }
-
-
+    /* outline: 2px dotted orange; */
+}
 
 /* The 'footer' section with the contact links */
-
 /* Set the height of 'Contact Me' section */
 .contact-me {
     height: 7em;
@@ -345,9 +340,10 @@ h5 {
 
 #contactText {
     position: relative;
-    right: 20vw;
+    right: 15vw;
     font-family: ;
     font-size: 1.5em;
+    /* outline: 2px dotted purple; */
 }
 
 /* display the 'Contact Me' links in the center */
@@ -399,15 +395,86 @@ footer h5 {
 
 /* Media queries to dynamically resize the page */
 
+@media only screen and (max-width: 1024) {
+    /* Set the header colors and display style */
+    #navBar {
+        height: 9em;
+        margin: 0 auto;
+        padding: 2.5em;
+        background-color: var(--main-bk-color);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+/* Div for the profile photo and my name to align them to the left */
+#photo-name {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    outline: dashed palevioletred;
+}
+
+/* styling for the profile photo */
+#profile-photo {
+    width: 12rem;
+    height: auto;
+    border-radius: 47.5%;
+    margin: 0 auto;
+    /* margin-left: 2vw; */
+    /* margin-right: 0; */
+    overflow: hidden;
+    outline: 2px dotted pink;
+}
+
+/* Profile photo sizing */
+#profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* set the styling for my name */
+#photo-name h1.name {
+    font-size: 5rem;
+    padding: 1rem 3.5rem;
+    font-weight: bold;
+}
+
+/* push Navigation links to the right */
+.navigation {
+    margin-left auto;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* style the navigation and contact links */
+.navigation ul, 
+.contact-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    display: flex;
+}
+
+/* style the page navigation links */
+.navigation li,
+.contact-links li {
+    margin-right: 2em;
+}
+}
+
+
 /* Mobile phone screen */
 
 @media only screen and (max-width: 600px) {
     #navBar h1.name {
-        /* font-family: 'Poppins', sans-serif; */
         font-size: 2rem;
-        /* padding: 1rem 3.5rem; */
         font-weight: bold;
-        /* width: 25%; */
     }
     
     /* hide text navigation and contact links */
