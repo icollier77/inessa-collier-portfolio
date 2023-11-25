@@ -6,6 +6,8 @@ html {
 
   html, body {
     height: 100%;
+    width: 100vw;
+    margin: 0;
   }
 
   /* Collapse padding and border for all elements */
@@ -109,7 +111,7 @@ h5 {
     margin-left auto;
     width: 50%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -238,7 +240,8 @@ h5 {
 .page-section {
     display: flex;
     align-items: center;
-    margin: 0;
+    height: auto;
+    margin: 2.5em 0;
 }
 
 /* Titles of the main sections */
@@ -250,10 +253,9 @@ h5 {
     padding-right: 2.5rem;
 }
 
-/* About Me section */
+/* extra top margin for 1st section */
 #about {
-    height: auto;
-    margin: 5em 0;
+    margin-top: 7em;
 }
 
 #aboutText{
@@ -266,7 +268,7 @@ h5 {
     min-height: 500px;
     height: 70vh;
     width: 80%;
-    margin: 0px 5px;
+    /* margin: 0px 5px; */
     display: grid;
     grid-template-columns: 50% 25% 25%;
     grid-template-rows: 50% 50%;
@@ -358,7 +360,6 @@ h5 {
 
   /* Style the text links in the 'Contact me' section */
 .contact-links a {
-    /* font-family: 'Poppins', sa  ns-serif; */
     font-family: 'Josefin Sans', sans-serif;
     padding: 5px;
     margin: auto 2em;
@@ -414,6 +415,16 @@ footer h5 {
         margin-right: 1em;
     }
 
+    /* adjust margins around sections */
+    .page-section {
+        margin: 1.5em 0;
+    }
+
+    /* adjust the extra top margin for 1st section */
+    #about {
+        margin-top: 5em;
+    }
+
     /* resize the section's title size */
     .page-section h2 {
         font-size: 1.5em;
@@ -445,11 +456,6 @@ footer h5 {
     #photo-name h1.name {
         font-size: 3rem;
     }
-
-    /* resize the site navigation bar */
-    .navigation {
-        margin-right: 3px;
-    }
     
     .navigation h2 {
         font-size: 16px;
@@ -460,28 +466,33 @@ footer h5 {
         height: 15vh;
     }
 
+     /* change the main section layout */
+     .page-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+    }
+
+    /* resize section titles */
+    .page-section h2 {
+        flex: 0 0 8vw;
+        font-size: 1.5em;
+        /* padding: 0 auto 100px auto; */
+        border-right: none;
+    }
+
     /* reduce the 'About' section top and bottom margins */
     #about {
         margin: 3em 0;
     }
 
-    /* resize the section title size */
-    .page-section h2 {
-        font-size: 0.8em;
-        padding-right: 0.1em;
-        padding-left: 0.5em;
-    }
-
-    /* resize the section title size */
-    .page-section h2 {
-        font-size: 1.5em;
-        padding-right: 0.5em;
-    }
-
     /* resize the 'About' text */
     #aboutText {
-        padding-left: 1.2em;
-        padding-right: 3em;
+        padding-left: 4em;
+        padding-right: 4em;
+        font-size: 12px;
     }
 
     /* resize the 'Portfolio' section */
@@ -489,7 +500,7 @@ footer h5 {
         min-height: 300px;
         height: 50vh;
         width: 80%;
-        margin: 0px 2px;
+        margin: 0 auto 3em auto;
     }
 
     /* resize the project cards */
@@ -514,7 +525,7 @@ footer h5 {
         justify-content: space-between;
         align-items: center;
         position: relative;
-        right: 10vw;
+        margin: 0 auto 25px auto;
     }
 }
 
@@ -548,30 +559,16 @@ footer h5 {
         font-size: 10px;
     }
 
-    .navIcon {
-        /* max-width: 10px; */
-        /* max-width: 10px; */
-        /* margin-right: 5em; */
-    }
-
     /* resize the hero banner */
     .hero-banner {
         height: 10vh;
     }
 
     .hero-banner h4 {
-        font-size: 16px;
+        font-size: 12px;
     }
 
-    /* change the main section layout */
-    .page-section {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0;
-    }
-
+    /* TODO: may need to delete */
     /* resize section titles */
     .page-section h2 {
         flex: 0;
@@ -591,6 +588,7 @@ footer h5 {
         padding-right: 4em;
         font-size: 12px;
     }
+    /* END OF DELETE */
 
     /* resize the 'Portfolio' section */
     .my-projects {
@@ -641,9 +639,6 @@ footer h5 {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        position: relative;
-        right: 3px;
-        margin-bottom: 15px;
     }
 
     .contact-links li {
@@ -657,6 +652,60 @@ footer h5 {
 
     footer h5 {
         font-size: 12px;
-        padding-top: 1em;
+        padding-top: 2em;
     }
-  }
+}
+
+/* Mobile phone screen - 375px */
+
+@media only screen and (max-width: 375px) {
+    /* resize my name */
+    #navBar h1.name {
+        font-size: 1.5rem;
+    }
+}
+
+/* Mobile phone screen - 320px */
+
+@media only screen and (max-width: 320px) {
+
+    /* resize navBar */
+    #navBar {
+        height: 4em;
+        padding: 0.5em;
+    }
+    
+    /* resize the profile photo */
+    #profile-photo {
+        width: 3rem;
+        margin-left: 0.5vw;
+    }
+    
+    /* resize my name */
+    #navBar h1.name {
+        font-size: 1rem;
+    }
+
+    /* resize the navigation text */
+    #navigationText {
+        margin-right: 1px;
+    }
+    
+    .navigation h2 {
+        font-size: 10px;
+    }
+
+    /* change the space between navigation links */
+    .navigation li {
+       margin: 0 5px;
+    }
+
+    /*  */
+    .contact-links a {
+        padding: 2px;
+        margin: auto 2em;
+      }
+
+   
+}
+
