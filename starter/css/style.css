@@ -49,13 +49,9 @@ h2 {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-
-h2 {
-    /* font-family: 'Poppins', sa  ns-serif; */
-}
-
 h3 {
-    font-family: 'Josefin Sans', sans-serif;;
+    /* font-family: 'Josefin Sans', sans-serif; */
+    font-family: 'Poppins', sa  ns-serif;;
     font-size: 1.2em;
 }
 
@@ -117,6 +113,10 @@ h5 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.navigation h2 {
+    font-size: 24px;
 }
 
 /* style the navigation and contact links */
@@ -235,8 +235,7 @@ h5 {
 .page-section {
     display: flex;
     align-items: center;
-    padding: 1.5rem;
-    /* outline: 3px dashed blue; */
+    margin: 3em 5em 2em 2em;
 }
 
 /* Titles of the main sections */
@@ -255,15 +254,14 @@ h5 {
 /* About Me section */
 #about {
     height: auto;
-    margin: 3em 5em 2em 2em;
 }
 
 /* create a grid display for my projects */
 .my-projects {
     min-height: 500px;
     height: 70vh;
-    width: 70%;
-    margin: 0px 5%;
+    width: 80%;
+    margin: 0px 5px;
     display: grid;
     grid-template-columns: 50% 25% 25%;
     grid-template-rows: 50% 50%;
@@ -300,11 +298,11 @@ h5 {
 
 /* size and style for all project cards */
 .card {
-    border-bottom: 2px solid white;
+    border-bottom: 3px solid white;
     display: flex;
     flex-direction: row wrap;
     align-items: flex-end;
-    margin: 1em;
+    margin: 0.7em;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -340,7 +338,7 @@ h5 {
 
 #contactText {
     position: relative;
-    right: 15vw;
+    right: 10vw;
     font-family: ;
     font-size: 1.5em;
     /* outline: 2px dotted purple; */
@@ -355,6 +353,8 @@ h5 {
 
   /* Style the text links in the footer */
 .contact-links a {
+    /* font-family: 'Poppins', sa  ns-serif; */
+    font-family: 'Josefin Sans', sans-serif;
     padding: 2px 5px;
     margin: auto 2em;
     text-decoration: none;
@@ -383,14 +383,10 @@ footer {
 }
 
 footer h5 {
-    font-weight: lighter;
-    color: var(--secondary-bk-color);
-}
-
-/* TODO: not working, change */
-footer h5 {
     text-align: center;
     padding-top: 2em;
+    font-weight: lighter;
+    color: var(--secondary-bk-color);
 }
 
 /* Media queries to dynamically resize the page */
@@ -502,7 +498,7 @@ footer h5 {
 
     /* TODO: CHANGE Resize the grid */
     .my-projects {
-        margin: 0 auto;
+        margin: 0;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 1fr);
