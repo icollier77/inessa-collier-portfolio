@@ -43,10 +43,6 @@ body {
     height: 100%;
 }
 
-.page-wrapper {
-    background: linear-gradient(to bottom, var(--main-bk-color), var(--secondary-bk-color));
-}
-
 /* Typography */
 h1,
 h2 {
@@ -233,7 +229,8 @@ h5 {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    
+    background: linear-gradient(to bottom, var(--main-bk-color), var(--secondary-bk-color));
+    /* outline: 2px double yellow; */
 }
 
 .page-section {
@@ -262,28 +259,48 @@ h5 {
     margin: 3em 5em 2em 2em;
 }
 
-/* create a flex display for my projects */
+/* create a grid display for my projects */
 .my-projects {
-    height: 500px;
-    margin: 0 auto;
-    display: flex;
-    flex-flow: row wrap;
+    min-height: 500px;
+    height: 70vh;
     width: 70%;
-    outline: 3px double magenta;
+    margin: 0px 5%;
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: 
+        "project1 project2 project3"
+        "project1 project4 project5";
+    /* outline: 3px double magenta; */
 }
 
-/* project cards when moused over */
-.card:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-    /* box-shadow: 1px 1px 2px var(--main-bk-color), 0 0 25px var(--highlight-font-color), 0 0 5px var(--highlight-font-color); */
-    box-shadow: 1px 1px 2px var(--main-bk-color), 0 0 25px var(--highlight-font-color), 0 0 5px var(--main-font-color);
+#project1 {
+    grid-area: project1;
+    background-image: url(../images/project1.jpg);
+}
+
+#project2 {
+    grid-area: project2;
+    background-image: url(../images/project2.jpg);
+}
+
+#project3 {
+    grid-area: project3;
+    background-image: url(../images/project3.jpg);
+}
+
+#project4 {
+    grid-area: project4;
+    background-image: url(../images/project4.jpg);
+}
+
+#project5 {
+    grid-area: project5;
+    background-image: url(../images/project5.jpg);
 }
 
 /* size and style for all project cards */
 .card {
-    height: 10em;
-    width: 10em;
     border-bottom: 2px solid white;
     display: flex;
     flex-direction: row wrap;
@@ -295,16 +312,14 @@ h5 {
     /* outline: 2px dotted greenyellow; */
 }
 
-.card:nth-of-type(1) {
-    margin-top: 2em; 
+/* project cards when moused over */
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    /* box-shadow: 1px 1px 2px var(--main-bk-color), 0 0 25px var(--highlight-font-color), 0 0 5px var(--highlight-font-color); */
+    box-shadow: 1px 1px 2px var(--main-bk-color), 0 0 25px var(--highlight-font-color), 0 0 5px var(--main-font-color);
 }
 
-/* overwrites size for the 1st card */
-#project1 {
-    height: 25em;
-    width: 20em;
-    background-image: url(../images/project1.jpg);
-}
 
 /* style for the text in the cards */
 .text {
@@ -312,31 +327,10 @@ h5 {
     opacity: 0.8;
     padding: 2em 2em;
     width: 100%;
-    /* outline: 2px dotted orange; */
+    outline: 2px dotted orange;
   }
 
-/* section with smaller cards */
-.smallerCards {
-    display: flex;
-    flex-flow: column wrap;
-    outline: 3px double orangered;
-}
 
-#project2 {
-    background-image: url(../images/project2.jpg);
-}
-
-#project3 {
-    background-image: url(../images/project3.jpg);
-}
-
-#project4 {
-    background-image: url(../images/project4.jpg);
-}
-
-#project5 {
-    background-image: url(../images/project5.jpg);
-}
 
 /* The 'footer' section with the contact links */
 
