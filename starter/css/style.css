@@ -703,7 +703,7 @@ footer h5 {
     /* Style the text links in the 'Contact me' section */
     .contact-links a {
         padding: 2px;
-        margin: auto 5px;
+        margin: auto 1px;
     }
 }
 
