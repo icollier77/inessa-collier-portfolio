@@ -141,11 +141,19 @@ h5 {
     color: var(--main-font-color);
 }
 
-#navigationText a:hover, a:focus, 
-#navigationIcons a:hover, a:focus {
-    color: var(--hover-link);
+#navigationText a:hover, 
+#navigationText a:focus, 
+#navigationIcons a:hover, 
+#navigationIcons a:focus  {
     cursor: pointer;
 }
+
+#navigationText a:hover, 
+#navigationText a:focus  {
+    color: var(--hover-link);
+}
+
+
 
 #navigationText a:active {
     color: var(--active-link);
@@ -355,20 +363,16 @@ h5 {
 .contact-links a {
     /* font-family: 'Poppins', sa  ns-serif; */
     font-family: 'Josefin Sans', sans-serif;
-    padding: 2px 5px;
+    padding: 5px;
     margin: auto 2em;
     text-decoration: none;
     color: var(--main-font-color);
   }
 
-.contact-links a:visited {
-    /* color: var(--visited-link); */
-}
-
-.contact-links a:hover, a:focus {
+.contact-links a:hover, 
+.contact-links a:focus {
     background-color: var(--highlight-font-color);
     border-radius: 5px;
-    /* border: 1px solid white; */
     cursor: pointer;
 }
 
