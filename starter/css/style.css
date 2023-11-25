@@ -6,6 +6,7 @@ html {
 
   html, body {
     height: 100%;
+    width: 100vw;
   }
 
   /* Collapse padding and border for all elements */
@@ -243,7 +244,7 @@ h5 {
 .page-section {
     display: flex;
     align-items: center;
-    margin: 3em 5em 2em 2em;
+    margin: 0;
 }
 
 /* Titles of the main sections */
@@ -255,13 +256,15 @@ h5 {
     padding-right: 2.5rem;
 }
 
-#aboutText{
-    padding-left: 2em;
-}
-
 /* About Me section */
 #about {
     height: auto;
+    margin: 5em 0;
+}
+
+#aboutText{
+    padding-left: 3em;
+    padding-right: 8em;
 }
 
 /* create a grid display for my projects */
@@ -395,135 +398,148 @@ footer h5 {
 
 /* Media queries to dynamically resize the page */
 
-@media only screen and (max-width: 1024) {
-    /* Set the header colors and display style */
+/* Small laptop or tablet screen */
+@media only screen and (max-width: 1024px) {
+    /* resize my name */
+    #photo-name h1.name {
+        font-size: 4rem;
+        padding: 1rem 2rem;
+    }
+
+    /* resize the site navigation bar */
+    .navigation {
+        margin-right: 5px;
+    }
+    
+    .navigation h2 {
+        font-size: 20px;
+    }
+    
+    .navigation li,
+    .contact-links li {
+        margin-right: 1em;
+    }
+
+    /* resize the section title size */
+    .page-section h2 {
+        font-size: 1.5em;
+        padding-right: 0.5em;
+    }
+
+    /* resize the 'About' text */
+    #aboutText {
+        padding-left: 1.5em;
+        padding-right: 4em;
+    }
+}
+
+/* Tablet screen - 768px */
+@media only screen and (max-width: 768px) {
     #navBar {
-        height: 9em;
-        margin: 0 auto;
-        padding: 2.5em;
-        background-color: var(--main-bk-color);
+        height: 8em;
+        padding: 1em;
+        /* display: flex; */
+        justify-content: space-evenly;
+    }
+    
+    /* styling for the profile photo */
+    #profile-photo {
+        width: 8rem;
+        margin-left: 1vw;
+    }
+    
+    #photo-name h1.name {
+        font-size: 3rem;
+    }
+
+    /* resize the site navigation bar */
+    .navigation {
+        margin-right: 3px;
+    }
+    
+    .navigation h2 {
+        font-size: 16px;
+    }
+    
+    /* resize the hero banner */
+    .hero-banner {
+        height: 15vh;
+    }
+
+    /* reduce the 'About' section top and bottom margins */
+    #about {
+        margin: 3em 0;
+    }
+
+    /* resize the section title size */
+    .page-section h2 {
+        font-size: 0.8em;
+        padding-right: 0.1em;
+        padding-left: 0.5em;
+    }
+
+    /* resize the section title size */
+    .page-section h2 {
+        font-size: 1.5em;
+        padding-right: 0.5em;
+    }
+
+    /* resize the 'About' text */
+    #aboutText {
+        padding-left: 1.2em;
+        padding-right: 3em;
+    }
+
+    /* resize the 'Portfolio' section */
+    .my-projects {
+        min-height: 300px;
+        height: 50vh;
+        width: 80%;
+        margin: 0px 2px;
+    }
+
+    /* resize the project cards */
+    .card {
+        border-bottom: 2px solid white;
+        margin: 0.3em;
+    }
+
+    /* change the text sizing on cards */
+    .text {
+        padding: 0.5em;
+    }
+
+    /* replace contact text with icons */
+    #contactText {
+        display: none;
+    }
+
+    #contactIcons {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        /* justify-content: flex-start; */
         align-items: center;
+        position: relative;
+        right: 10vw;
     }
-
-/* Div for the profile photo and my name to align them to the left */
-#photo-name {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    outline: dashed palevioletred;
-}
-
-/* styling for the profile photo */
-#profile-photo {
-    width: 12rem;
-    height: auto;
-    border-radius: 47.5%;
-    margin: 0 auto;
-    /* margin-left: 2vw; */
-    /* margin-right: 0; */
-    overflow: hidden;
-    outline: 2px dotted pink;
-}
-
-/* Profile photo sizing */
-#profile-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* set the styling for my name */
-#photo-name h1.name {
-    font-size: 5rem;
-    padding: 1rem 3.5rem;
-    font-weight: bold;
-}
-
-/* push Navigation links to the right */
-.navigation {
-    margin-left auto;
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* style the navigation and contact links */
-.navigation ul, 
-.contact-links ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    font-size: 2rem;
-    display: flex;
-}
-
-/* style the page navigation links */
-.navigation li,
-.contact-links li {
-    margin-right: 2em;
-}
 }
 
 
-/* Mobile phone screen */
+/* Mobile phone screen - 425px */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 425px) {
+    body {
+        width: 425px;
+    }
+    
+    /* resize the profile photo */
+    #profile-photo {
+        width: 5rem;
+        margin-left: 1vw;
+    }
+    
     #navBar h1.name {
-        font-size: 2rem;
-        font-weight: bold;
-    }
-    
-    /* hide text navigation and contact links */
-    #navigationText, #contactText {
-      display: none;
-    }
-    
-    /* Display icons in small screen */
-    #iconsNav, #iconsContact {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        margin: 0 auto;
+        font-size: 1.5rem;
     }
 
-    #iconsNav img {
-        height:fit-content;
-    }
-
-    /* adjust the icon size */
-    #iconsContact img {
-        height: 50%;
-        width: auto;
-    }
-
-    /* TODO: CHANGE Resize the grid */
-    .my-projects {
-        margin: 0;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(6, 1fr);
-        grid-template-areas: 
-            "project1" 
-            "project2" 
-            "project3"
-            "project4" 
-            "project5" 
-            "project6";
-     }
-
-     .card {
-        height: 10em;
-        width: 10em;
-        border: 2px solid white;
-        border-radius: 10%;
-        padding: 2rem;
-        display: flex;
-        /* flex-direction: row wrap; */
-        align-items: flex-end;
-        margin: 1em 1em;
-    }
   }
