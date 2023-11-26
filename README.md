@@ -208,13 +208,16 @@ During the project development I faced several challenges as I wanted the page t
 
 ### `Bootcamp resources`
 
-In trying to find out how to do various aspects of the page (eg, _flex_ vs _grid_, etc), I would it very helpful to refer to the practice problems that we worked on during the Module 2 of the Front End Web Development bootcamp.
+In trying to find out how to do various aspects of the page (eg, _flex_ vs _grid_, etc), I found it very helpful to refer to the practice problems that we worked on during the Module 2 of the Front End Web Development bootcamp.
 <br>
 <br>
 In particular, I found the <i>'Jakes Eatery'</i> and the <i>'Furniture Store'</i> problems very helpful, both for the design solutions and the code under the hood.
 <br>
 <br>
 Finally, I want to mention the invaluable help I received from tutors in the bootcamp who helped me think about building the page by breaking it into smaller parts and going after them one by one, trying to find similar solutions in previous work or online.
+<br>
+<br>
+Finally, my fellow students in the bootcamp, [Ben Rumbold][ben-rumbold-url] and [John Dick][john-dick-url] shared valuable insights in their approaches to the webpage design and functionality. These were helpful as I thought about my own portfolio page payout, the colour scheme, other design and coding aspects.
 
 
 ### `Code contributions`
@@ -322,3 +325,5 @@ The project is deployed. You can find the portfolio and the corresponding code h
 [smooth-scroll-url]:  https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link 
 [quora-url]: https://www.quora.com/How-can-I-add-an-event-listener-to-an-image-inside-JavaScript-to-make-the-image-clickable
 [stackoverflow-url]: https://stackoverflow.com/questions/3778611/how-do-i-add-a-hyperlink-to-a-background-image
+[ben-rumbold-url]: https://github.com/Ben-Rumbold
+[john-dick-url]: https://github.com/johndck
