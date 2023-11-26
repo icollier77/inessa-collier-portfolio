@@ -271,10 +271,10 @@ Overall, it is clear that the mobile design should be very different from the de
 I struggled with organizing my 'Portfolio' section, trying to arrange the cards using **flex** display. In the end, I realized that a much easier and much more functional approach would be to use a **grid**. Re-arranging components of a grid for a smaller screen is very easy and requires minimum code adjustments. 
 <br>
 <br>
-A grid was also the best solution to make sure that one of the card is larger than the others. I initially used the `:nth-of-type(1)` selector but the overall _flex_ display worked poorly for the design.
+A **grid** was also the best solution to make sure that one of the card is larger than the others. I initially used the `:nth-of-type(1)` selector but the overall **flex** display worked poorly for the design.
 <br>
 <br>
-Finally, the _media queries_, although they may seem quite easy, can take a significant amount of time, mainly due to resizing fonts and margins. I think I still need to understand better when and how to utilize different units of size, such as _em_, _rem_, _%_, _vh_, and _vw_ to reduce the number of adjustments for different screen sizes.
+Finally, the **media queries**, although they may seem quite easy, can take a significant amount of time, mainly due to resizing fonts and margins. I think I still need to understand better when and how to utilize different units of size such as _em_, _rem_, _%_, _vh_, and _vw_ in order to reduce the number of adjustments for different screen sizes.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -283,7 +283,7 @@ Finally, the _media queries_, although they may seem quite easy, can take a sign
 <!-- Deployed project -->
 ## `Deployed project`
 
-The project is deployed. You can find the portfolio and the corresponding code here:
+The project is now live. You can find the portfolio and the corresponding code here:
 
 - [ ] [Inessa Collier portfolio][deployed-url]
 - [ ] [Project repo][repo-url]
