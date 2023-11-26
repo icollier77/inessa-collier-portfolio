@@ -1,21 +1,5 @@
 <a name="readme-top"></a>
 
-<!-- INESSA: change the links and shields!!!! -->
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Repo][repo-shield]][repo-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -31,9 +15,9 @@
     <br />
     <br />
     <!-- CHANGE to the deployed app link -->
-    <a href="https://github.com/github_username/repo_name/issues">Deployed application</a>
+    <a href="https://icollier77.github.io/inessa-collier-portfolio/">Deployed application</a>
     ·
-    <a href="https://github.com/github_username/repo_name">GitHub repo</a>
+    <a href="https://github.com/icollier77/inessa-collier-portfolio">GitHub repo</a>
     <br>
     <br>
   </p>
@@ -48,6 +32,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#mock-up">Mock-Up</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
@@ -55,73 +40,83 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#wireframe">Wireframe</a></li>
-        <li><a href="#palette">Page palette</a></li>
-        <li><a href="">Another step</a></li>
+        <li><a href="#colour-palette">Colour Palette</a></li>
+          <ul>
+            <li><a href="#main-colour-palette">Main colour palette</a></li>
+            <li><a href="#accent-colours">Accent colours</a></li>
+            <li><a href="#font-colourfont-colour">Font colour</a></li>
+            <li><a href="#webpage-palette">Webpage palette</a></li>
+          </ul>
+        <li><a href="#images">Images</a></li>
+          <ul>
+            <li><a href="#photos">Photos</a></li>
+            <li><a href="#icons">Icons</a></li>
+          </ul>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#development">Development</a></li>
+      <ul>
+        <li><a href="#bootcamp-resources">Bootcamp Resources</a></li>
+        <li><a href="#code-contributions">Code Contributions</a></li>
+          <ul>
+            <li><a href="#line-animation">Line Animation</a></li>
+            <li><a href="#object-size-transformation">Object Size Transformation</a></li>
+            <li><a href="#box-shadow">Box Shadow</a></li>
+            <li><a href="#smooth-scrolling">Smooth Scrolling</a></li>
+            <li><a href="#href-on-images">Href on Images</a></li>
+          </ul>
+      </ul>
+    <li><a href="#project-takeaways">Project Takeaways</a></li>
+    <li><a href="#deployed-project">Deployed Project</a></li>
   </ol>
 </details>
 
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
-The below screenshot shows the starter wireframe for building the portfolio. The wireframe was created on [Figma](www.figma.com).
+## `About The Project`
+The goal of this project is to build a webpage to show my portfolio of web development projects as I progress through the [Front-End Web Development Bootcamp][bootcamp-url].
 
-[![Portfolio Webpage Wireframe][product-screenshot]](https://www.figma.com/file/7nFGrxuNdDncL5zAGZeUnS/My-Portfolio?type=design&node-id=0-1&mode=design&t=Ibu5RkBqdhjmieJK-0)
-
-<p>The portfolio is a one-page application and should contain:
-<ul>
-    <li>Header with my name</li>
-    <li>Navigation links to the page sections</li>
-    <li>An image divider for esthetics</li>
-    <li>'About me' section that provides short overview of my background and skills.</li>
-    <li>'My work' section that displays cards with my projects. The cards contain links to deployed applications.</li>
-    <li>'Contact me' with links to the main contact methods (email, LinkedIn, GitHub).</li>
-</ul>
+<p>The critical requirements for this portfolio page:</p>
+<ol>
+  <li>When the page is loaded the page presents your name, a recent photo or avatar, and links to sections about you, your work, and how to contact you</li>
+  <li>When one of the links in the navigation is clicked then the UI scrolls to the corresponding section</li>
+  <li>When viewing the section about your work then the section contains titled images of your applications</li>
+  <li>When presented with the your first application then that application's image should be larger in size than the others</li>
+  <li>When images of the applications are clicked then the user is taken to that deployed application</li>
+  <li>When the page is resized or viewed on various screens and devices then the layout is responsive and adapts to my viewport</li>
+</ol>
 </p>
 
-<!-- CHANGE -->
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+### `Mock-up`
+We were presented with a mockup of a portfolio page as an example:
+
+![Mock-Up][mock-up-gif]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+### `Built With`
 
-### Built With
-
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+I used the following technologies when building this portfolio page: 
+* [HTML][html-url]
+* [CSS][css-url]
+* [JavaScript][js-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## `Getting Started`
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+<p>The project requires a wireframe to set the visual aspects of the planned portfolio page. This includes object shapes, locations, fonts, and the colour scheme.</p>
+<p>The next step is to build an html file and the corresponding css file.</p>
+<p>The last step is to adjust the css file for different device screens using media queries.</p>
 
-### Wireframe
 
-The below screenshot shows the starter wireframe for building the portfolio webpage. The wireframe was created on [Figma](www.figma.com).
+### `Wireframe`
 
-[![Portfolio Webpage Wireframe][wireframe-image]][wireframe-url]
-
-<p>The portfolio is a one-page application and should contain:
+<p>As explained in the project brief, the portfolio is a one-page application and should contain:
 <ul>
     <li>Header with my name</li>
     <li>Navigation links to the page sections</li>
@@ -130,133 +125,200 @@ The below screenshot shows the starter wireframe for building the portfolio webp
     <li>'My work' section that displays cards with my projects. The cards contain links to deployed applications.</li>
     <li>'Contact me' with links to the main contact methods (email, LinkedIn, GitHub).</li>
 </ul>
-</p>
 
-### Page palette
+I built the following wireframe using [Figma][figma-url]:
 
-To generate a color palette for the web page, I used the [Coloors](https://coolors.co/) palette creation tool.
+[![Portfolio Webpage Wireframe][wireframe-image]][wireframe-url]
 
-The selected palette:
+### `Colour Palette`
 
-[![Webpage color palette][color-palette]][palette-url]
+I decided to utilize dark tones in my design to create a <b>professional</b> and <b>contemporary</b> portfolio page.
 
-These colors are to be used as background colors in the header, body, and cards.
+#### `Main colour palette`
 
-I also used a [color contract checker][contrast-checker-url] to find the best font color.
+To generate a color palette for the web page, I used the [Coloors][coloors-url] palette creation tool.
+
+The main palette selected:
+
+[![Main color palette][main-color-palette]][main-palette-url]
+
+#### `Accent colours`
+
+I also researched the web design colour trends for 2023 and 2024, and chose to use 2 accent colours mentioned in a blog post on Wix:
+
+[7 website color trends that’ll be everywhere in 2024][wix-blog-url]
+
+#### `Font Colour`
+
+I used a [color contract checker][contrast-checker-url] to find the best font color, and selected white.
+
+#### `Webpage palette`
+
+As a result, I selected the <b>following colours</b> for the website:
+<ul>
+  <li>Main background colour: #0D0221</li>
+  <li>Secondary background colour: #6688B0</li>
+  <li>Main font colour: white</li>
+  <li>Visited link: light grey</li>
+  <li>Hover link: #C419BE</li>
+  <li>Active link: #279DC0</li>
+  <li>Highlight background colour: #C2E7D9</li>
+  <li>Highlight font colour: #2628DD</li>
+</ul>
+
+These colours are set as <i>global variables</i> in the css file.
+
+### `Images`
+
+#### `Photos`
+
+I sourced free photos from [Unsplash][unsplash-url], and used the following images in my design:
+- [ ] [image for the Divider section][divider-img-url]
+- [ ] [cover image for Project 1][project1-url] 
+- [ ] [cover image for Project 2][project2-url]
+- [ ] [cover image for Project 3][project3-url]
+- [ ] [cover image for Project 4][project4-url]
+- [ ] [cover image for Project 5][project5-url]
+
+#### `Icons`
+
+The navigation links at the top of the page and the links in the 'Contact me' section at the bottom of the page are set to be in text format when displayed on desktop. 
+<br>
+<br>
+However, when displayed on mobile screens, I wanted those links to switch to icons as they would fit the available space better. 
+<br>
+<br>
+Unfortunately, I was not able to find good free white icons for the navigation links.
+<br>
+<br>
+I used the following free white icons for the 'Contact me' section:
+* []() [Email icon][email-icon-url]
+* []() [LinkedIn icon][linkedin-icon-url]
+* []() [GitHub icon][github-icon-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
+<!-- The build process -->
+## `Development`
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+During the project development I faced several challenges as I wanted the page to have certain functionality but did not know how to do it.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+### `Bootcamp resources`
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+In trying to find out how to do various aspects of the page (eg, _flex_ vs _grid_, etc), I would it very helpful to refer to the practice problems that we worked on during the Module 2 of the Front End Web Development bootcamp.
+<br>
+<br>
+In particular, I found the <i>'Jakes Eatery'</i> and the <i>'Furniture Store'</i> problems very helpful, both for the design solutions and the code under the hood.
+<br>
+<br>
+Finally, I want to mention the invaluable help I received from tutors in the bootcamp who helped me think about building the page by breaking it into smaller parts and going after them one by one, trying to find similar solutions in previous work or online.
 
 
+### `Code contributions`
 
-<!-- CONTRIBUTING -->
-## Contributing
+However, in some cases, what I wanted to achieve went beyond what we discussed in the class or worked on in the practice problems. In those cases, I turned to the favourite tool of all programmers - Google.
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+#### `Line animation`
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+First of all, I wanted to have my motto <i>"Let's build something great!</i> move across the divider image. I did not know how to do this but after doing some research, I found advice and code in this [HubSpot article][hubspot-url]. 
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+#### `Object size transformation`
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+I wanted the cards in the 'Portfolio' section slightly increase in size when moused over. Again, some online research helped me remember how to do it. Namely, [this article][transformation-url] was very helpful.
 
+#### `Box shadow`
 
+I also wanted the project cards to have a dark shadow when moused over, adding to the highlight effect. I found a [great example][darkshadow-url] of dark shadow applied to white font and utilized in my my `box-shadow` property.
 
-<!-- LICENSE -->
-## License
+#### `Smooth scrolling`
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+In my intended design, the page should scroll _smoothly_ to the related section when one of the 'Navigation' links is clicked. An article from [Stackflow][smooth-scroll-url] was very helpful in solving this problem.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+#### `Href on images`
 
+One of the biggest challenges I faced was adding a weblink (`<a href>`) to images of projects. I placed the images in the css file as backgrounds to the corresponding `<div>` sections. Some advice online suggested that I would be able to wrap the `<div>` sections in `<a href>` however in practice, this did not work. 
+<br>
+<br>
+Another solution would be to move all images into the HTML file but firstly, it would change the page design, and secondly, it would require many more hours of re-writing the code.
+<br>
+<br>
+I knew that it should be possible to click on the images even if they are placed as backgrounds in the css file. After some research, I found suggestions that _JavaScript event listeners_ can offer a solution to this problem. These articles in particular offered some insights:
+* []() [How can I add an event listener to an image inside JavaScript to make the image clickable?][quora-url]
+* []() [How do I add a hyperlink to a background image?][stackoverflow-url]
 
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+However, the code suggested in these articles did not work for my project directly. I then used ChatGPT3.5 to ask clarifying questions and find the exact code that gave me the required solution. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
 
-* [README template](https://github.com/othneildrew/Best-README-Template)
-* []()
-* []()
+<!-- TAKEAWAYS -->
+## `Project Takeaways`
+
+It was an interesting project that challenged me to go over the **flex** and **grid** display in css numerous times. I realized the importance of changing the flex display to _column_ when resizing for mobile screens, both for the navigation links, and for the main section of the screen.
+<br>
+<br>
+Overall, it is clear that the mobile design should be very different from the desktop design, and should be wireframed from the start as well.
+<br>
+<br>
+I struggled with organizing my 'Portfolio' section, trying to arrange the cards using **flex** display. In the end, I realized that a much easier and much more functional approach would be to use a **grid**. Re-arranging components of a grid for a smaller screen is very easy and requires minimum code adjustments. 
+<br>
+<br>
+A grid was also the best solution to make sure that one of the card is larger than the others. I initially used the `:nth-of-type(1)` selector but the overall _flex_ display worked poorly for the design.
+<br>
+<br>
+Finally, the _media queries_, although they may seem quite easy, can take a significant amount of time, mainly due to resizing fonts and margins. I think I still need to understand better when and how to utilize different units of size, such as _em_, _rem_, _%_, _vh_, and _vw_ to reduce the number of adjustments for different screen sizes.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+
+<!-- Deployed project -->
+## `Deployed project`
+
+The project is deployed. You can find the portfolio and the corresponding code here:
+
+- [ ] [Inessa Collier portfolio][deployed-url]
+- [ ] [Project repo][repo-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[repo-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
+[html-url]: https://www.w3schools.com/html/
+[css-url]: https://www.w3schools.com/css/default.asp
+[js-url]: https://www.w3schools.com/js/default.asp
+[deployed-url]: https://icollier77.github.io/inessa-collier-portfolio/
 [repo-url]: https://github.com/icollier77/inessa-collier-portfolio
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/inessacollier/
+[mock-up-gif]: images/01-css-challenge-demo.gif
 [wireframe-image]: starter/images/portfolio-wireframe.png
-[wireframe-url]: https://www.figma.com/file/7nFGrxuNdDncL5zAGZeUnS/My-Portfolio?type=design&node-id=0-1&mode=design&t=Ibu5RkBqdhjmieJK-0
-[color-palette]: starter/images/Website-palette.png
-[palette-url]: https://coolors.co/0d0221-0f084b-26408b-a6cfd5-c2e7d9
+[wireframe-url]: https://www.figma.com/file/
+[bootcamp-url]: https://www.edx.org/boot-camps/coding/skills-bootcamp-in-front-end-web-development
+[figma-url]: https://figma.com
+[coloors-url]: https://coolors.co/
+[main-color-palette]: starter/images/main-palette.png
+[main-palette-url]: https://coolors.co/0d0221-0f084b-26408b-a6cfd5-c2e7d9
+[wix-blog-url]: https://www.wix.com/blog/website-color-trends?utm_source=google&utm_medium=cpc&utm_campaign=13774768257%5E126077909722&experiment_id=%5E%5E531699814064%5E%5E_DSA&gclid=Cj0KCQiA6vaqBhCbARIsACF9M6n3Fa1SVaeIERjT2uQGhIsFCQ9G3ysPLUtkUikSlxyY5i2wiIkVVOQaAttBEALw_wcB
 [contrast-checker-url]: https://webaim.org/resources/contrastchecker/
-
-
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+[unsplash-url]: https://unsplash.com/ 
+[divider-img-url]: https://unsplash.com/photos/purple-and-white-round-light-9bBLdOaRIB0
+[project1-url]: https://unsplash.com/photos/black-flat-screen-computer-monitor-8qEB0fTe9Vw
+[project2-url]: https://unsplash.com/photos/turned-on-monitor-displaying-function-digital_best_reviews-gnyA8vd3Otc
+[project3-url]: https://unsplash.com/photos/turned-on-gray-laptop-computer-XJXWbfSo2f0
+[project4-url]: https://unsplash.com/photos/macbook-pro-beside-white-ceramic-mug-on-brown-wooden-table-k-rKfqSm4L4
+[project5-url]: https://unsplash.com/photos/apple-macbook-beside-computer-mouse-on-table-9l_326FISzk 
+[email-icon-url]: https://www.iconsdb.com/white-icons/email-14-icon.html 
+[linkedin-icon-url]:  https://www.iconsdb.com/white-icons/linkedin-4-icon.html
+[github-icon-url]: https://www.iconsdb.com/white-icons/github-10-icon.html 
+[hubspot-url]: https://blog.hubspot.com/website/scrolling-text-css 
+[transformation-url]:  https://www.tutorialrepublic.com/faq/how-to-transform-image-size-on-mouse-hover-without-affecting-the-layout-in-css.php 
+[darkshadow-url]: https://www.w3schools.com/css/css3_shadows.asp 
+[smooth-scroll-url]:  https://stackoverflow.com/questions/7717527/smooth-scrolling-when-clicking-an-anchor-link 
+[quora-url]: https://www.quora.com/How-can-I-add-an-event-listener-to-an-image-inside-JavaScript-to-make-the-image-clickable
+[stackoverflow-url]: https://stackoverflow.com/questions/3778611/how-do-i-add-a-hyperlink-to-a-background-image
