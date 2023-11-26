@@ -40,7 +40,6 @@ body {
     font-family: 'Work Sans', sans-serif;
     font-size: 1.75rem;
     line-height: 1.5;
-    height: 100%;
 }
 
 /* Typography */
@@ -115,17 +114,13 @@ h5 {
     align-items: center;
 }
 
-.navigation h2 {
-    font-size: 24px;
-}
-
 /* style the navigation and contact links */
 .navigation ul, 
 .contact-links ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    font-size: 2rem;
+    font-size: 3rem;
     display: flex;
 }
 
@@ -248,27 +243,42 @@ h5 {
 .page-section h2 {
     flex: 0 0 15vw;
     font-size: 2em;
-    border-right: 2px solid var(--main-font-color);
     text-align: end;
     padding-right: 2.5rem;
 }
 
 /* extra top margin for 1st section */
 #about {
-    margin-top: 7em;
+    margin-top: 4em;
 }
 
 #aboutText{
     padding-left: 3em;
     padding-right: 8em;
+    border-left: 2px solid var(--main-font-color);
+    /* text-align: justify; */
+    /* text-justify: auto; */
 }
+
+#about-main {
+    font-size: 1.5em;
+}
+
+#about-addl {
+    font-size: 1em;
+    text-align: justify;
+    text-justify: auto;
+}
+
+
 
 /* create a grid display for my projects */
 .my-projects {
-    min-height: 500px;
+    /* border-left: 2px solid var(--main-font-color); */
+    /* min-height: 500px; */
     height: 70vh;
     width: 80%;
-    /* margin: 0px 5px; */
+    margin: 0px 5px;
     display: grid;
     grid-template-columns: 50% 25% 25%;
     grid-template-rows: 50% 50%;
@@ -316,11 +326,10 @@ h5 {
     /* outline: 2px dotted greenyellow; */
 }
 
-/* project cards when moused over */
+/* highlight project cards when moused over */
 .card:hover {
     cursor: pointer;
     transform: scale(1.05);
-    /* box-shadow: 1px 1px 2px var(--main-bk-color), 0 0 25px var(--highlight-font-color), 0 0 5px var(--highlight-font-color); */
     box-shadow: 1px 1px 2px var(--main-bk-color), 0 0 25px var(--highlight-font-color), 0 0 5px var(--main-font-color);
 }
 
@@ -334,6 +343,7 @@ h5 {
 }
 
 /* The 'Contact' section with the contact links */
+
 /* Set the height of 'Contact Me' section */
 .contact-me {
     height: 7em;
@@ -341,12 +351,16 @@ h5 {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    /* outline: 2px dashed blue; */
+}
+
+#contact h2 {
+    border-right: 2px solid var(--main-font-color);
 }
 
 #contactText {
     position: relative;
     right: 10vw;
-    font-family: ;
     font-size: 1.5em;
     /* outline: 2px dotted purple; */
 }
@@ -393,7 +407,8 @@ footer h5 {
 
 /* Media queries to dynamically resize the page */
 
-/* Small laptop or tablet screen */
+/* Small laptop or large tablet screen with 1024px */
+
 @media only screen and (max-width: 1024px) {
     /* resize my name */
     #photo-name h1.name {
@@ -439,6 +454,7 @@ footer h5 {
 }
 
 /* Tablet screen - 768px */
+
 @media only screen and (max-width: 768px) {
     #navBar {
         height: 8em;
@@ -458,7 +474,7 @@ footer h5 {
     }
     
     .navigation h2 {
-        font-size: 16px;
+        font-size: 20px;
     }
     
     /* resize the hero banner */
@@ -479,7 +495,6 @@ footer h5 {
     .page-section h2 {
         flex: 0 0 8vw;
         font-size: 1.5em;
-        /* padding: 0 auto 100px auto; */
         border-right: none;
     }
 
@@ -492,7 +507,8 @@ footer h5 {
     #aboutText {
         padding-left: 4em;
         padding-right: 4em;
-        font-size: 12px;
+        font-size: 16px;
+        border: none;
     }
 
     /* resize the 'Portfolio' section */
@@ -512,6 +528,11 @@ footer h5 {
     /* change the text sizing on cards */
     .text {
         padding: 0.5em;
+    }
+
+    /* remove the border in the Contact section */
+    #contact h2 {
+        border: none;
     }
 
     /* replace contact text with icons */
@@ -538,30 +559,28 @@ footer h5 {
 /* Mobile phone screen - 425px */
 
 @media only screen and (max-width: 425px) {
-    /* resize navBar */
+    /* re-align navBar */
     #navBar {
-        height: 5em;
-        padding: 0.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     
     /* resize the profile photo */
     #profile-photo {
-        width: 3.5rem;
-        margin-left: 1vw;
-    }
-    
-    /* resize my name */
-    #navBar h1.name {
-        font-size: 2rem;
+        width: 5rem;
     }
 
     /* resize the navigation text */
+
     #navigationText {
-        margin-right: 2px;
+        margin-top: 10px;
     }
     
     .navigation h2 {
-        font-size: 10px;
+        font-size: 16px;
+        margin: 0 5px;
     }
 
     /* resize the hero banner */
@@ -573,13 +592,10 @@ footer h5 {
         font-size: 12px;
     }
 
-    /* TODO: may need to delete */
-    /* resize section titles */
+    /* resize sections' titles */
     .page-section h2 {
-        flex: 0;
-        font-size: 1em;
-        margin: 0 auto 10px auto;
-        border-right: none;
+        font-size: 1.5em;
+        margin: 10px auto;
     }
 
     /* reduce the 'About' section top and bottom margins */
@@ -589,36 +605,41 @@ footer h5 {
 
     /* resize the 'About' text */
     #aboutText {
-        padding-left: 4em;
-        padding-right: 4em;
-        font-size: 12px;
+        padding-left: 3em;
+        padding-right: 3em;
+        font-size: 14px;
     }
-    /* END OF DELETE */
 
     /* resize the 'Portfolio' section */
     .my-projects {
-        min-height: 100px;
-        height: 50vh;
-        width: 80%;
-        margin: 0px 2px;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: repeat(3, 1fr);
+        height: 140vh;
+        width: 65%;
+        margin: 0 2px;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(10, 1fr);
         grid-template-areas: 
-            "project1 project1"
-            "project2 project3"
-            "project4 project5";
+            "project1"
+            "project1"
+            "project2"
+            "project2"
+            "project3"
+            "project3"
+            "project4"
+            "project4"
+            "project5"
+            "project5";
+        row-gap: 10px;
         /* outline: 3px double magenta; */
     }
 
     /* resize the project cards */
     .card {
         border-bottom: 1px solid white;
-        margin: 5px;
     }
 
     /* change the text sizing on cards */
     .text {
-        padding: 0 5px;
+        padding: 3px 5px;
     }
 
     .text h3 {
@@ -664,55 +685,25 @@ footer h5 {
 /* Mobile phone screen - 375px */
 
 @media only screen and (max-width: 375px) {
-    /* resize my name */
-    #navBar h1.name {
-        font-size: 1.5rem;
+    .navigation ul {
+        font-size: 10px;
     }
 
     .contact-links a {
         padding: 2px;
         margin: auto 15px;
     }
+
+
 }
 
 /* Mobile phone screen - 320px */
 
 @media only screen and (max-width: 320px) {
 
-    /* resize navBar */
-    #navBar {
-        height: 4em;
-        padding: 0.5em;
-    }
-    
-    /* resize the profile photo */
-    #profile-photo {
-        width: 3rem;
-        margin-left: 0.5vw;
-    }
-    
-    /* resize my name */
-    #navBar h1.name {
-        font-size: 1rem;
-    }
-
-    /* resize the navigation text */
-    #navigationText {
-        margin-right: 1px;
-    }
-    
-    .navigation h2 {
-        font-size: 10px;
-    }
-
-    /* change the space between navigation links */
-    .navigation li {
-       margin: 0;
-    }
-
-    /* Style the text links in the 'Contact me' section */
-    .contact-links a {
-        margin: auto 10px;
+    /* resize the 'About-Main' section */
+    #about-main {
+        font-size: 1.2em;
     }
 }
 
