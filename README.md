@@ -57,7 +57,7 @@
     <li><a href="#development">Development</a></li>
       <ul>
         <li><a href="#bootcamp-resources">Bootcamp Resources</a></li>
-        <li><a href="#code-contributions">Code Contributions</a></li>
+        <li><a href="#other-sources">Other Sources</a></li>
           <ul>
             <li><a href="#line-animation">Line Animation</a></li>
             <li><a href="#object-size-transformation">Object Size Transformation</a></li>
@@ -224,7 +224,7 @@ I also want to mention the invaluable help I received from tutors in the bootcam
 Finally, my fellow students in the bootcamp, [Ben Rumbold][ben-rumbold-url] and [John Dick][john-dick-url] shared valuable insights in their approaches to the webpage design and functionality. These were helpful as I thought about my own portfolio page payout, the colour scheme, other design and coding aspects.
 
 
-### `Code contributions`
+### `Other sources`
 
 However, in some cases, what I wanted to achieve went beyond what we discussed in the class or worked on in the practice problems. In those cases, I turned to the favourite tool of all programmers - Google.
 
@@ -238,7 +238,7 @@ I wanted the cards in the 'Portfolio' section slightly increase in size when mou
 
 #### `Box shadow`
 
-I also wanted the project cards to have a dark shadow when moused over, adding to the highlight effect. I found a [great example][darkshadow-url] of dark shadow applied to white font and utilized in my my `box-shadow` property.
+I also wanted the project cards to have a dark shadow when moused over, adding to the highlight effect. I found a [great example][darkshadow-url] of dark shadow applied to white font and utilized in my `box-shadow` property.
 
 #### `Smooth scrolling`
 
