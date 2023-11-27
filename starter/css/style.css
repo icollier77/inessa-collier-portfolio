@@ -109,7 +109,6 @@ h5 {
 
 /* push Navigation links to the right */
 .navigation {
-    margin-left auto;
     width: 50%;
     display: flex;
     justify-content: space-evenly;
@@ -187,7 +186,7 @@ h5 {
 /* Styling the motto in the hero banner */
 .motto {
     font-size: 2rem;
-    color: var(--main-font-color)
+    color: var(--main-font-color);
     /* animation from https://blog.hubspot.com/website/scrolling-text-css */
     -moz-transform: translateX(100%);
     -webkit-transform: translateX(100%);
@@ -319,7 +318,7 @@ h5 {
 .card {
     border-bottom: 3px solid white;
     display: flex;
-    flex-direction: row wrap;
+    flex-flow: row wrap;
     align-items: flex-end;
     margin: 0.7em;
     background-size: cover;
