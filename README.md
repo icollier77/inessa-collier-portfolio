@@ -68,6 +68,10 @@
       </ul>
     <li><a href="#project-takeaways">Project Takeaways</a></li>
     <li><a href="#deployed-project">Deployed Project</a></li>
+      <ul>
+        <li><a href="#deployed-application">Deployed Application</a></li>
+        <li><a href="#links-to-deployed-project">Links to Deployed Project</a></li>
+      </ul>
   </ol>
 </details>
 
@@ -283,7 +287,15 @@ Finally, the **media queries**, although they may seem quite easy, can take a si
 <!-- Deployed project -->
 ## `Deployed project`
 
-The project is now live. You can find the portfolio and the corresponding code here:
+The project is now live.
+
+### `Deployed application`
+
+![Deployed page][deployed-gif]
+
+### `Links to deployed project`
+
+You can find the portfolio and the corresponding code here:
 
 - [ ] [Inessa Collier portfolio][deployed-url]
 - [ ] [Project repo][repo-url]
@@ -296,6 +308,7 @@ The project is now live. You can find the portfolio and the corresponding code h
 [css-url]: https://www.w3schools.com/css/default.asp
 [js-url]: https://www.w3schools.com/js/default.asp
 [deployed-url]: https://icollier77.github.io/inessa-collier-portfolio/
+[deployed-gif]: starter/images/Deployed-portfolio.gif
 [repo-url]: https://github.com/icollier77/inessa-collier-portfolio
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/inessacollier/
