@@ -308,7 +308,9 @@ You can find the portfolio and the corresponding code here:
 [css-url]: https://www.w3schools.com/css/default.asp
 [js-url]: https://www.w3schools.com/js/default.asp
 [deployed-url]: https://icollier77.github.io/inessa-collier-portfolio/
+
 [deployed-gif]: starter/images/Deployed-portfolio.gif
+
 [repo-url]: https://github.com/icollier77/inessa-collier-portfolio
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/inessacollier/
