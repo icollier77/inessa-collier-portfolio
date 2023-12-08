@@ -2,13 +2,13 @@ html {
     /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
     font-size: 62.5%;
     scroll-behavior: smooth;
-  }
+}
 
-  html, body {
+html, body {
     height: 100%;
     width: 100vw;
     margin: 0;
-  }
+}
 
   /* Collapse padding and border for all elements */
 * {

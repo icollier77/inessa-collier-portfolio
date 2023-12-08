@@ -221,7 +221,7 @@ In particular, I found the <i>'Jakes Eatery'</i> and the <i>'Furniture Store'</i
 I also want to mention the invaluable help I received from tutors in the bootcamp who helped me think about building the page by breaking it into smaller parts and going after them one by one, trying to find similar solutions in previous work or online.
 <br>
 <br>
-Finally, my fellow students in the bootcamp, [Ben Rumbold][ben-rumbold-url] and [John Dick][john-dick-url] shared valuable insights in their approaches to the webpage design and functionality. These were helpful as I thought about my own portfolio page payout, the colour scheme, other design and coding aspects.
+Finally, my fellow students in the bootcamp, [Ben Rumbold][ben-rumbold-url] and [John Dick][john-dick-url] shared valuable insights in their approaches to the webpage design and functionality. These were helpful as I thought about my own portfolio page layout, the colour scheme, other design and coding aspects.
 
 
 ### `Other sources`
